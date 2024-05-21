@@ -1,0 +1,31 @@
+
+<section class="featured-section min-width">
+    <div class="container col-md-12 ">
+        <div class="row col-lg-12">
+            <div class="text-center mt-5">
+                <h2 class="text-white">Featured posts</h2>
+                <p class="text-white">All content provided on this platform reflects my personal opinions and experiences unless otherwise stated. While I strive to ensure accuracy and reliability, readers should interpret the content with discretion and consider individual circumstances before applying any suggestions or advice..</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3" *ngFor="let featured of featuredPosts">
+                <app-post-card [postData]="featured"></app-post-card>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5 min-width">
+    <div class="col-md-12 text-center">
+        <h2>Latest Posts</h2>
+        <p>Stau updated with my latest posts below!</p>
+    </div>
+
+    <div class="row">
+        <div class="post-container col-md-4 mt-3" *ngFor="let post of latestPosts">
+            <app-post-card [postData]="post"></app-post-card>
+        </div>
+        
+    </div>
+</section>

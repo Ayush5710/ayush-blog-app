@@ -1,0 +1,17 @@
+
+<div *ngIf="postData" class="card" [routerLink]="['/post', postData.id]">
+    <img src={{postData?.data.postImgPath}} alt="ayush-dhawan-post-img" class="card-img-top">
+
+    <div class="card-body">
+        <small class="bg-light text-danger text-center">{{postData?.data.category.category}}</small>
+        <!-- <small class="bg-light text-success text-center ml-3" *ngIf="postData?.data.isFeatured">Featured</small> -->
+        <small class="bg-light text-info text-center ml-3">Views - {{postData?.data.views}}</small>
+
+        <h5 class="mt-1">
+            {{postData?.data.title}}
+        </h5>
+        <p class="summary">{{postData?.data.excerp}}</p>
+
+        <small class="bg-light text-warning text-center ml-3">LAST UPDATED - {{postData?.data.created_at.toMillis() | date}}</small>
+    </div>
+</div>

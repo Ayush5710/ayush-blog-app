@@ -1,0 +1,26 @@
+
+
+<div style="width: 100vw; min-width: 500px; display: flex; align-items: center; justify-content: center;">
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center mt-3 mb-5 ">
+                <h3>SUBSCRIPTION FORM</h3>
+                <p class="m-auto subs-text">Your support matters!</p>
+    
+                <form class="form mb-5 mt-5" [formGroup]="subscribeForm" (ngSubmit)="onSubmit(subscribeForm.value)">
+                    <div class="form-group col-md-5">
+                        <input type="text" [ngClass]="{'is-invalid': fc['name'].touched && fc['name'].invalid}" class="form-control" placeholder="Your name" formControlName="name">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <input type="email" [ngClass]="{'is-invalid': fc['email'].touched && fc['email'].invalid}" class="form-control shadow-effect" placeholder="Your email" formControlName="email">
+                    </div>
+                
+                    <div class="form-group col-md-2">
+                        <button [disabled]="subscribeForm.invalid" [ngClass]="{'cursor-not-allowed': subscribeForm.invalid}" class="btn btn-block btn-info btn-theme"> SUBSCRIBE </button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+
+<div class="card mb-5 mt-5 pb-5 shadow-effect">
+    <div class="card-body">
+        <h4 class="mt-3 mb-3"  *ngIf="commentList">Comments ({{commentList.length | json}})</h4>
+
+        <div>
+            <div *ngFor="let comment of commentList" class="comment-box mt-3">
+                <h6 class="mb-0">{{comment.data.name}}</h6>
+                <small class="text-success">{{comment.data?.created_at.toMillis() | date}}</small>
+    
+                <div class="mt-3 mb-3">
+                    {{comment.data?.comment}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
