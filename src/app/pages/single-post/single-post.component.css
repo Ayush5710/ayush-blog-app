@@ -6,10 +6,9 @@
     min-width: 500px;
 }
 
-.similar-posts-container{
+.similar-posts-container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Centers items horizontally */
 }
